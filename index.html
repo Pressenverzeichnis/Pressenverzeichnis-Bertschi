@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f20000; /* Roter Hintergrund */
+      color: #ffffff; /* Weiße Textfarbe */
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0; /* Rand für h2 entfernen, um zusätzlichen Platz zu verhindern */
+    }
+
+    #loginForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      padding: 20px;
+      background-color: #ffffff; /* Weißer Hintergrund für das Formular */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      padding: 15px 0; /* Anpassung der Höhe auf die gleiche Höhe wie der "Login"-Button */
+      margin: 10px;
+      width: 100%;
+      box-sizing: border-box; /* Padding in die Brechungsberechnung einbeziehen */
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px
+    }
+
+    .bubble-button {
+      padding: 15px 30px;
+      background-color: #ffffff; /* Weißer Hintergrund für den Button */
+      color: #f20000; /* Rote Textfarbe für den Button */
+      border: 2px solid #f20000;
+      border-radius: 50px; /* Runde Buttonform */
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-family: Arial, sans-serif; /* Gleiche Schriftart wie "Zur Homepage"-Button */
+      font-size: 14px; /* Geänderte Schriftgröße auf 14px */
+    }
+
+    .bubble-button:hover {
+      background-color: #f20000; /* Roter Hintergrund bei Hover */
+      color: #ffffff; /* Weiße Textfarbe bei Hover */
+    }
+
+    #message {
+      color: #ffffff; /* Weiße Textfarbe für die Fehlermeldung */
+    }
+
+    img {
+      max-width: calc(100% - 40px); /* Maximale Breite des Logos mit einem Rand von 20px auf jeder Seite */
+      height: auto; /* Seitenverhältnis beibehalten */
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Anpassungen für "Zur Homepage"-Button */
+    .homepage-button {
+      padding: 15px 0; /* Geringes vertikales Padding für schmalere Darstellung, vertikales Padding bleibt erhalten */
+      width: 200px; /* Breite auf ca. 200px festlegen */
+      font-size: 14px; /* Geänderte Schriftgröße auf 14px */
+      font-weight: bold; /* Fett gedruckte Schrift */
+      margin-top: 10px; /* Abstand zum vorherigen Element */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="https://www.bertschimulden.ch/">
+      <!-- Aktualisiere das src-Attribut mit deinem Logo -->
+      <img src="Logo.jpg" alt="Header-Bild">
+    </a>
+    <br> </br>
+    <h2>Pressen-Hub</h2>
+  </header>
+
+  <form id="loginForm">
+    <label for="password"></label>
+    <input type="password" id="password" name="password" required onkeydown="if (event.key === 'Enter') checkPassword()">
+    <div class="button-container">
+      <button class="bubble-button" type="button" onclick="checkPassword()">Login</button>
+    </div>
+  </form>
+
+  <p id="message"></p>
+
+  <!-- Separater "Zur Homepage"-Button außerhalb des Anmeldeformulars -->
+  <div class="button-container">
+    <input class="bubble-button homepage-button" type="button" onclick="window.location.href = 'https://www.bertschimulden.ch/';" value="Zur Homepage"/>
+  </div>
+  <script>
+    function checkPassword() {
+      var enteredPassword = document.getElementById('password').value;
+      var correctPasswords = ['211', '222', 'password3', 'password4', 'password5', 'password6', 'password7', 'password8', 'password9', 'password10'];
+
+      if (correctPasswords.includes(enteredPassword)) {
+        switch (enteredPassword) {
+          case '211':
+            window.location.href = 'https://docs.google.com/spreadsheets/d/1RTMINLTv7Wl9QUq82CVBbyrkE0WzswVxGMGw4utg-Xc/edit?usp=sharing';
+            break;
+          case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;
+		  case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;
+		  case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;
+		  case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;
+		  case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;
+		  case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;
+		  case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;
+		  case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;
+		  case '222':
+            window.location.href = 'https://www.bertschimulden.ch/';
+            break;			
+
+
+
+          default:
+            break;
+        }
+      } else {
+        document.getElementById('message').innerHTML = 'Falsches Passwort. Bitte versuche es erneut.';
+      }
+    }
+  </script>
+</body>
+</html>
